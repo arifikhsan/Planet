@@ -1,7 +1,5 @@
 package com.example.android.planetjava;
 
-import android.content.Context;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +15,6 @@ import java.util.Locale;
 class PlanetHolder extends RecyclerView.ViewHolder {
 
     private TextView name, distance, gravity, diameter;
-    private Context context;
 
     PlanetHolder(final View itemView) {
         super(itemView);
@@ -31,7 +28,7 @@ class PlanetHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 Log.d("aaaaaaaa", name.getText().toString());
-                Toast.makeText(context, name.getText().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), name.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
